@@ -21,8 +21,8 @@
                 <MenuItem Header="File">
                     <MenuItem Header="New Project" />
                     <MenuItem Header="Open Project" />
-                    <MenuItem Header="Save" />
-                    <MenuItem Header="Save as..." />
+                    <MenuItem Header="Save" Click="SaveFileCommand" />
+                    <MenuItem Header="Save as..." Click="SaveAsFileCommand" />
                     <Separator />
                     <MenuItem Header="Exit" />
                 </MenuItem>
@@ -86,31 +86,21 @@
                         <dragablz:TabablzControl.InterTabController>
                             <dragablz:InterTabController />
                         </dragablz:TabablzControl.InterTabController>
-                        <TabItem Header="File 1" IsSelected="True">
+                        <TabItem Header="File 1" IsSelected="True" x:Name="TabItem1">
                             <TextBox DockPanel.Dock="Top"
                                      VerticalScrollBarVisibility="Visible"
-                                     DataContext="{Binding Editor}"
-                                     FontFamily="{Binding Format.Family}"
-                                     FontSize="{Binding Format.Size}"
-                                     FontStyle="{Binding Format.Style}"
-                                     FontWeight="{Binding Format.Weight}"
-                                     TextWrapping="{Binding Format.Wrap}"
+                                     x:Name="TextBox1"
                                      AcceptsReturn="True"
                                      AcceptsTab="True"
-                                     Text="{Binding Document.Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                     Text="{Binding Path=ReadMessage, Mode=TwoWay}"/>
                         </TabItem>
-                        <TabItem Header="File 2">
+                        <TabItem Header="File 2" x:Name="TabItem2">
                             <TextBox DockPanel.Dock="Top"
                                      VerticalScrollBarVisibility="Visible"
-                                     DataContext="{Binding Editor}"
-                                     FontFamily="{Binding Format.Family}"
-                                     FontSize="{Binding Format.Size}"
-                                     FontStyle="{Binding Format.Style}"
-                                     FontWeight="{Binding Format.Weight}"
-                                     TextWrapping="{Binding Format.Wrap}"
+                                     x:Name="TextBox2"
                                      AcceptsReturn="True"
                                      AcceptsTab="True"
-                                     Text="{Binding Document.Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                     Text="{Binding Path=ReadMessage, Mode=TwoWay}"/>
                         </TabItem>
                     </dragablz:TabablzControl>
                 </Grid>
