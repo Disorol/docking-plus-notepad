@@ -55,9 +55,6 @@
 
             <Grid Grid.Column="0">
                 <dragablz:TabablzControl Margin="8">
-                    <dragablz:TabablzControl.InterTabController>
-                        <dragablz:InterTabController />
-                    </dragablz:TabablzControl.InterTabController>
                     <TabItem Header="Solution Explorer" IsSelected="True">
                         <TextBlock>Solution Explorer</TextBlock>
                     </TabItem>
@@ -83,9 +80,6 @@
 
                 <Grid Grid.Row="0">
                     <dragablz:TabablzControl Margin="8">
-                        <dragablz:TabablzControl.InterTabController>
-                            <dragablz:InterTabController />
-                        </dragablz:TabablzControl.InterTabController>
                         <TabItem Header="File 1" IsSelected="True" x:Name="TabItem1">
                             <TextBox DockPanel.Dock="Top"
                                      VerticalScrollBarVisibility="Visible"
@@ -113,9 +107,6 @@
 
                 <Grid Grid.Row="2">
                     <dragablz:TabablzControl Margin="8">
-                        <dragablz:TabablzControl.InterTabController>
-                            <dragablz:InterTabController />
-                        </dragablz:TabablzControl.InterTabController>
                         <TabItem Header="Console" IsSelected="True">
                             <TextBlock>Console</TextBlock>
                         </TabItem>
